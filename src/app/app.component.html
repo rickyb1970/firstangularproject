@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+ <div *ngIf="credentials === 'admin'; else membersOnly">
+    <h1>
+        This is an SPA in Apps Dev<br>
+       
+    </h1>  
+ <ul>
+    <li *ngFor="let element of dataCollection">
+        {{element}}
+    </li> 
+ </ul>       
+ </div>
+<ng-template #membersOnly>
+    <div>   
+        <h1>
+            This is the members area
+        </h1>
+    </div>
+</ng-template>
+<input [type] = "inputType">
+<a [href] = "urls" (mouseenter)="doThat($event)" (mouseleave)="doThat($event)">Click Here</a><br>
+<button (click)="doThis($event)">
+    Click Me 
+</button>
+<br>
+<input type="text" [(ngModel)] = "inputValue" size="50">
+<div>
+    {{outputValue}}
+</div>
